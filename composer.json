@@ -1,0 +1,23 @@
+{
+    "name": "phpno1/passport",
+    "description": "laravel and passport extend",
+    "require-dev": {
+        "laravel/passport": "^5.0"
+    },
+    "license": "yes",
+    "authors": [
+        {
+            "name": "yb19890724",
+            "email": "354037968@qq.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "App\\":"app/",
+            "phpno1\\passport\\":"src"
+        }
+    },
+    "require": {
+        "php":">7.1"
+    }
+}
