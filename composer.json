@@ -4,7 +4,6 @@
     "require-dev": {
         "laravel/passport": "^5.0"
     },
-    "license": "yes",
     "authors": [
         {
             "name": "yb19890724",
