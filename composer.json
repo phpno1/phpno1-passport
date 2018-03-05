@@ -2,7 +2,8 @@
     "name": "phpno1/passport",
     "description": "laravel and passport extend",
     "require-dev": {
-        "laravel/passport": "^5.0"
+        "laravel/passport": "^5.0",
+        "laravel/framework": "5.5.*"
     },
     "license": "yes",
     "authors": [
