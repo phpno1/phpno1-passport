@@ -78,16 +78,13 @@ Accept ：application/json
 Content-Typ ：application/json
 ```
 
-+ 设置body参数
++ 设置body参数,并使用POST方式提交到控制器的登入接口
 
 ```
-{
-    "username": "king19800105",
-	"password": "secret"
-}
+{"username": "king19800105", "password": "secret"}
 ```
 
-+ 使用POST方式提交后的响应
++ 响应内容
 
 ```
 {
