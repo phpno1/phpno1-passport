@@ -82,7 +82,7 @@ Content-Typ ：application/json
 
 ```
 {
-	"username": "king19800105",
+    "username": "king19800105",
 	"password": "secret"
 }
 ```
