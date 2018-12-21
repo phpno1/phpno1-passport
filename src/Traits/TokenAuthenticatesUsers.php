@@ -45,11 +45,15 @@ trait TokenAuthenticatesUsers
         }
 
         if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
+            try {
+                return $this->sendLoginResponse($request);
+            } catch (UnauthorizedHttpException $e) {
+                $this->responseLoginFail($request);
+                return;
+            }
         }
-        
-        $this->incrementLoginAttempts($request);
-        $this->sendFailedLoginResponse();
+
+        $this->responseLoginFail($request);
     }
 
     /**
@@ -246,6 +250,17 @@ trait TokenAuthenticatesUsers
     protected function authenticated(Request $request, $user)
     {
 
+    }
+
+    /**
+     * 登入失败的处理
+     *
+     * @throws ValidationException
+     */
+    protected function responseLoginFail($request)
+    {
+        $this->incrementLoginAttempts($request);
+        $this->sendFailedLoginResponse();
     }
 
 }
